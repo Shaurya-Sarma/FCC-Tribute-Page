@@ -1,0 +1,578 @@
+/* 
+Methodology includes components from SMACSS, ACSS, OCCSS, BEM
+- dividing code aross multiple SASS  partials
+- helper classes to apply consistent styling
+- naming convention: retain class specificity
+- pre-defining repetitve functions, mixin-ins, variables
+- id selectors as override rule sets (sometimes)
+*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Setting default browser font-size to 10px
+  Allows for easier convertions
+  IE: 25px/10px = 2.5rem or 250%
+*/
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+.h1 {
+  font-family: Lato, serif;
+  color: #000;
+  font-size: 3.6rem;
+  font-weight: 800;
+  padding: 0 4rem;
+}
+
+.h2 {
+  font-family: Lato, serif;
+  color: #660000;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 0 4rem;
+}
+
+.h3 {
+  font-family: Lato, serif;
+  color: #333;
+  font-size: 2.4rem;
+  font-weight: 400;
+  padding: 0 4rem;
+}
+
+.h4 {
+  font-family: Lato, serif;
+  color: #e25822;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0 4rem;
+}
+
+.h5 {
+  font-family: Lato, serif;
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 0 4rem;
+}
+
+.h6 {
+  font-family: Source Sans Pro, sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0 4rem;
+}
+
+.p {
+  font-family: Source Sans Pro, sans-serif;
+  color: #4f4e4c;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0 4rem;
+  line-height: 1.75;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .p {
+    line-height: 2;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .p {
+    line-height: 2.75;
+  }
+}
+
+.a {
+  font-family: Montserrat, sans-serif;
+  color: #8b008b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0 4rem;
+}
+
+.li {
+  font-family: Montserrat, sans-serif;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 550;
+  padding: 0 4rem;
+}
+
+.theme--orange {
+  color: #d66a00;
+}
+
+.u-padding-small-bottom {
+  padding-bottom: 3vh;
+}
+
+.u-padding-medium-bottom {
+  padding-bottom: 7.5vh;
+}
+
+.u-padding-large-bottom {
+  padding-bottom: 15vh;
+}
+
+.u-padding-small-top {
+  padding-top: 3vh;
+}
+
+.u-padding-medium-top {
+  padding-top: 7.5vh;
+}
+
+.u-padding-large-top {
+  padding-top: 15vh;
+}
+
+.heading-main-lev {
+  position: relative;
+  float: right;
+}
+
+.heading-main-lev--main {
+  text-transform: uppercase;
+  mix-blend-mode: screen;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1.2rem;
+  margin: 5rem 5rem 3rem 5rem;
+  display: block;
+}
+
+.heading-main-lev--sub {
+  text-transform: capitalize;
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.heading-section-lev {
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  margin: 2.5rem 0;
+}
+
+.heading-section-lev--sub {
+  text-align: center;
+}
+
+.heading-sub-lev {
+  margin: 3rem 0;
+  font-weight: 550;
+  font-style: italic;
+}
+
+.header {
+  padding: 1.8rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header {
+    padding: 0;
+  }
+}
+
+.header__container {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://i.imgur.com/Txm2nfS.jpg);
+  height: 100vh;
+  -webkit-clip-path: polygon(0 0, 95% 0, 100% 10%, 100% 100%, 5% 100%, 0 90%);
+          clip-path: polygon(0 0, 95% 0, 100% 10%, 100% 100%, 5% 100%, 0 90%);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header__container {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+.biography-page__article-block {
+  margin: 2.5rem 0;
+}
+
+.photo-page {
+  padding: 1.8rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .photo-page {
+    padding: 0;
+  }
+}
+
+.photo-page__container {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://miro.medium.com/max/10238/1*v0RCTUY4rmOHvBH2vCNBcQ.jpeg);
+  height: 90vh;
+  -webkit-clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0 90%, 0 0);
+          clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0 90%, 0 0);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .photo-page__container {
+    background-position: center;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+.photo-page__inner-quote-container {
+  border-left: 3px #fff solid;
+  background: rgba(67, 67, 67, 0.4);
+  padding: 2rem;
+  float: left;
+  max-width: 30vw;
+  margin: 10rem 5rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .photo-page__inner-quote-container {
+    margin-top: 45rem;
+    margin-left: 5rem;
+  }
+}
+
+.photo-page__quote {
+  color: #fff;
+  line-height: 1.75;
+}
+
+.books-page__images {
+  padding: 3rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.books-page__images--img {
+  width: 16rem;
+  margin: 1rem 1rem;
+  border: inset 0.1rem #000;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 75em) {
+  .books-page__images--img {
+    width: 14rem;
+  }
+}
+
+.books-page__images--img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.books-page__info--container {
+  display: none;
+  padding-bottom: 4.5rem;
+}
+
+.awards-page {
+  background-color: #ebe2d4;
+  -webkit-clip-path: polygon(10% 6%, 90% 6%, 100% 0, 100% 100%, 55% 100%, 50% 95%, 45% 100%, 0 100%, 0 0);
+          clip-path: polygon(10% 6%, 90% 6%, 100% 0, 100% 100%, 55% 100%, 50% 95%, 45% 100%, 0 100%, 0 0);
+}
+
+.awards-page__list {
+  margin: 5rem 10rem;
+}
+
+.awards-page__list-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 2rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: Montserrat, sans-serif;
+}
+
+.awards-page__list-label:hover {
+  background-color: #d4cabd;
+}
+
+.awards-page__list-label:hover .awards-page__list-content {
+  left: 1.8rem;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .awards-page__list-label:hover .awards-page__list-content {
+    left: 2.5rem;
+  }
+}
+
+.awards-page__list-content {
+  position: relative;
+  opacity: 0.5;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  left: -4rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .awards-page__list-content {
+    left: 1.8rem;
+  }
+}
+
+.information-page__article-block {
+  margin: 2rem 0;
+  padding: 0 20rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .information-page__article-block {
+    padding: 0 5rem;
+  }
+}
+
+.information-page__article-link {
+  text-decoration: none;
+  display: block;
+  margin: 4rem auto;
+  padding: 0;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+
+.information-page__article-link:hover {
+  background-color: #8b008b;
+  border-radius: 0.5rem;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #fff;
+  padding: 0.9rem;
+  font-weight: 550;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.information-page__article-link:visited {
+  background-color: #4b0082;
+}
+
+.information-page__article-link:active {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(51, 51, 51, 0.3), 0 6px 20px 0 rgba(51, 51, 51, 0.7);
+          box-shadow: 0 4px 8px 0 rgba(51, 51, 51, 0.3), 0 6px 20px 0 rgba(51, 51, 51, 0.7);
+}
+
+.information-page__social--container {
+  text-align: center;
+}
+
+.social__icon {
+  font-size: 8rem;
+  margin: 0 1rem;
+  padding: 1rem;
+  color: #4b0082;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .social__icon {
+    font-size: 6rem;
+  }
+}
+
+.social__icon:hover {
+  color: #8b008b;
+  -webkit-box-shadow: 1px 2px 4px rgba(220, 220, 220, 0.8);
+          box-shadow: 1px 2px 4px rgba(220, 220, 220, 0.8);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.footer--container {
+  background-color: #434343;
+  padding: 2.5rem;
+}
+
+.footer__credit {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer__icon--container {
+  text-align: center;
+}
+
+.footer__icon {
+  color: #fff;
+  font-size: 4rem;
+  margin: 0 2rem;
+  padding: 0.8rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer__icon {
+    font-size: 3rem;
+  }
+}
+
+.footer__icon:hover {
+  -webkit-box-shadow: 1px 2px 4px rgba(255, 255, 255, 0.6);
+          box-shadow: 1px 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+.books-page__images--expand {
+  -webkit-filter: saturate(115%) brightness(98%);
+          filter: saturate(115%) brightness(98%);
+  border-radius: 2rem;
+  -webkit-box-shadow: 10px 10px 5px #dcdcdc;
+          box-shadow: 10px 10px 5px #dcdcdc;
+}
+
+.books-page__images--expand:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#FACT__ONE::before {
+  content: "1";
+  font-size: 9.5rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.15;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#FACT__TWO::before {
+  content: "2";
+  font-size: 9.5rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.15;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#FACT__THREE::before {
+  content: "3";
+  font-size: 9.5rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.15;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#FACT__FOUR::before {
+  content: "4";
+  font-size: 9.5rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.15;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#FACT__FIVE::before {
+  content: "5";
+  font-size: 9.5rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.15;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+/*# sourceMappingURL=styles.css.map */

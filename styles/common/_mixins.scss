@@ -1,0 +1,58 @@
+// Responsiveness
+@mixin responsive($breakpoint) {
+  @if $breakpoint == xsmall_width {
+    @media only screen and (max-width: 28.125em) {
+      @content;
+    } //450px
+  }
+  @if $breakpoint == small_width {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == medium_width {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == large_width {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == xlarge_width {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+}
+
+// Typography
+@mixin text($font-type, $font-color, $font-size, $font-weight) {
+  font-family: $font-type;
+  color: $font-color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  padding: 0 4rem; // 40px/10px = 4rem
+}
+
+@mixin listNum($number) {
+  content: $number;
+  font-size: 9.5rem; // 95px/10px = 9.5rem
+  font-weight: bold;
+  color: colors(col-black);
+  width: 2rem;
+  opacity: 0.15;
+  transition: 0.25s;
+}
+// Animation
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

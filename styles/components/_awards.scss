@@ -1,0 +1,45 @@
+.awards-page {
+  background-color: colors(col-beige);
+  clip-path: polygon(
+    10% 6%,
+    90% 6%,
+    100% 0,
+    100% 100%,
+    55% 100%,
+    50% 95%,
+    45% 100%,
+    0 100%,
+    0 0
+  );
+  &__list {
+    margin: 5rem 10rem; // 50px/10px = 5rem 100px/10px = 10rem
+    &-label {
+      display: flex;
+      padding: 1rem 2rem; // 10px/10px = 1rem 20px/10px = 2rem
+      justify-content: flex-start;
+      list-style: none;
+      align-items: center;
+      transition: 0.5s;
+      font-family: map-get($fonts, font-alt);
+      &:hover {
+        background-color: colors(col-light-brown);
+      }
+      &:hover .awards-page__list-content {
+        left: 1.8rem; // 18px/10px = 1.8rem
+        opacity: 1;
+        @include responsive(medium_width) {
+          left: 2.5rem; // 25px/10px = 2.5rem
+        }
+      }
+    }
+    &-content {
+      position: relative;
+      opacity: 0.5;
+      transition: 0.3s ease-out;
+      left: -4rem; // 40px/10px = 4rem
+      @include responsive(medium_width) {
+        left: 1.8rem; // 18px/10px = 1.8rem
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// Page-specific Overides/Id Styling
+
+.books-page__images--expand {
+  filter: saturate(115%) brightness(98%);
+  border-radius: 2rem; // 20px/10px = 2rem
+  box-shadow: 10px 10px 5px colors(col-light-gray);
+  &:hover {
+    box-shadow: none;
+  }
+}
+#FACT__ONE::before {
+  @include listNum("1");
+}
+#FACT__TWO::before {
+  @include listNum("2");
+}
+#FACT__THREE::before {
+  @include listNum("3");
+}
+#FACT__FOUR::before {
+  @include listNum("4");
+}
+#FACT__FIVE::before {
+  @include listNum("5");
+}

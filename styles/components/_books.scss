@@ -1,0 +1,27 @@
+.books-page {
+  &__images {
+    padding: 3rem 4rem; // 30px/10px = 3rem 40px/10px = 4rem
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    &--img {
+      width: 16rem; // 160px/10px = 16rem
+      margin: 1rem 1rem; // 10px/10px = 1rem
+      border: inset 0.1rem colors(col-black); // 1px/10px = 0.1remm
+      filter: grayscale(80%);
+      transition: 0.3s ease-in-out;
+      @include responsive(large_width) {
+        width: 14rem; // 140px/10px = 14rem
+      }
+      &:hover {
+        filter: grayscale(0);
+        transform: scale(1.15);
+      }
+    }
+  }
+  &__info--container {
+    display: none;
+    padding-bottom: 4.5rem; // 45px/10px = 4.5rem
+  }
+}

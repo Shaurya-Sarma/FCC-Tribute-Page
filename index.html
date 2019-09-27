@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tribute Page | George R.R Martin</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <meta name="description" content="A tribute page to George R.R Martin." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body id="home">
+    <header class="header">
+      <section class="header__container">
+        <h1 class="heading-main-lev">
+          <span class="heading-main-lev--main h1">George R.R Martin</span>
+          <span class="heading-main-lev--sub h5">
+            author of the fantasy series
+            <i>A Song of Ice and Fire</i>
+          </span>
+        </h1>
+      </section>
+    </header>
+
+    <main class="main">
+      <section
+        class="biography-page u-padding-medium-top u-padding-small-bottom"
+      >
+        <h2 class="heading-section-lev h2">
+          | Martin's Story |
+        </h2>
+        <div class="biography-page__container">
+          <article class="biography-page__article">
+            <p class="biography-page__article-block p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+              tristique dui at mi lacinia blandit. Suspendisse convallis libero
+              enim, eget tempus ipsum malesuada sit amet. Suspendisse gravida,
+              urna ut molestie semper, sem odio lobortis libero, ut pretium
+              velit nulla vitae arcu. Aenean congue vestibulum nisi sed
+              tristique. Suspendisse malesuada porttitor mi eget porta.
+              Pellentesque at erat nec augue tempor mattis nec in odio. Nullam
+              nec ultricies orci, vitae mollis diam.
+            </p>
+            <p class="biography-page__article-block p">
+              Nunc volutpat arcu nunc, et rhoncus tortor viverra ac. Mauris
+              bibendum lacinia auctor. Ut a mauris id orci facilisis egestas. In
+              ut volutpat ligula. Pellentesque nibh turpis, faucibus ut varius
+              nec, hendrerit sed purus. Maecenas non pulvinar augue, ut dictum
+              enim. Maecenas leo tellus, semper ac neque vitae, dapibus tempor
+              nisi. Fusce eget tristique lacus. Etiam eu blandit quam, egestas
+              tincidunt orci.
+            </p>
+            <p class="biography-page__article-block p">
+              Donec ullamcorper magna eu ex varius laoreet et ac lacus. Nam
+              rutrum eleifend mauris. Interdum et malesuada fames ac ante ipsum
+              primis in faucibus. Integer id congue justo, ut faucibus purus.
+              Sed odio felis, luctus in dictum ac, luctus vel velit. Mauris
+              auctor blandit dolor sed pharetra. Aliquam arcu turpis, aliquet
+              sit amet ligula eget, semper porta nisi. Vestibulum ultricies
+              metus dui, eu placerat felis tincidunt id. In mi mauris, porta eu
+              massa vitae, vehicula tristique ligula. Aenean tempus ultrices
+              posuere. Cras condimentum et velit non pharetra. Nunc lobortis dui
+              ligula, nec tincidunt risus egestas vulputate. Nunc ut elit nec
+              leo dictum ultricies vel sit amet massa. Sed ac lectus a nibh
+              lacinia hendrerit et nec ipsum. Mauris vitae justo et est mattis
+              porttitor eget eu diam. In sagittis mollis libero, sed lacinia
+              purus luctus vitae.
+            </p>
+            <p class="biography-page__article-block p">
+              Praesent sed ante a erat volutpat maximus in at augue. Quisque
+              commodo urna vitae nulla gravida, sit amet ultrices nibh lobortis.
+              Cras ut lorem eget velit venenatis hendrerit eu eu justo. Sed quis
+              gravida leo. Pellentesque at nisl vitae metus dignissim vulputate
+              vulputate sit amet nisl. Proin pellentesque auctor odio vel
+              facilisis. Maecenas commodo porta tortor vitae fermentum.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="photo-page u-padding-large-top u-padding-medium-bottom">
+        <div class="photo-page__container">
+          <div class="photo-page__inner-quote-container">
+            <q class="photo-page__quote p"
+              >A reader lives a thousand lives before he dies, said Jojen. The
+              man who never reads lives only one.</q
+            >
+          </div>
+        </div>
+      </section>
+      <section class="books-page u-padding-medium-top u-padding-small-bottom">
+        <h2 class="heading-section-lev h2">| His Best-Selling Books |</h2>
+        <p class="heading-section-lev--sub p">
+          Click on the book for more information
+        </p>
+        <div class="books-page--container">
+          <section
+            class="books-page__images u-padding-small-top u-padding-large-bottom"
+          >
+            <div class="books-page__images--container ">
+              <img
+                src="https://images.booksense.com/images/888/479/9780006479888.jpg"
+                alt="Game of Thrones Book Cover"
+                class="books-page__images--img"
+                id="GOT__IMG"
+                onclick="displayContent('GOT__INFO','GOT__IMG')"
+              />
+            </div>
+            <div class="books-page__images--container">
+              <img
+                src="https://i.pinimg.com/originals/7d/78/98/7d7898d7d4008adc7360bd918c56beca.jpg"
+                alt="A Clash of Kings Book Cover"
+                class="books-page__images--img"
+                id="CK__IMG"
+                onclick="displayContent('CK__INFO','CK__IMG')"
+              />
+            </div>
+            <div class="books-page__images--container">
+              <img
+                src="https://i.harperapps.com/hcanz/covers/9780006479901/x293.jpg"
+                alt="A Storm of Swords Part 1 Book Cover"
+                class="books-page__images--img"
+                id="ASOS1__IMG"
+                onclick="displayContent('ASOS1__INFO','ASOS1__IMG')"
+              />
+            </div>
+            <div class="books-page__images--container">
+              <img
+                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1354567206l/147915.jpg"
+                alt="A Storm of Swords Part 2 Book Cover"
+                class="books-page__images--img"
+                id="ASOS2__IMG"
+                onclick="displayContent('ASOS2__INFO','ASOS2__IMG')"
+              />
+            </div>
+            <div class="books-page__images--container">
+              <img
+                src="http://www.georgerrmartin.com/gallery/art/crows02.jpg"
+                alt="A Feast For Crows Book Cover"
+                class="books-page__images--img"
+                id="FC__IMG"
+                onclick="displayContent('FC__INFO','FC__IMG')"
+              />
+            </div>
+            <div class="books-page__images--container">
+              <img
+                src="https://i.harperapps.com/hcanz/covers/9780006486114/x293.jpg"
+                alt="A Dance with Dragons Book Cover"
+                class="books-page__images--img"
+                id="DWD__IMG"
+                onclick="displayContent('DWD__INFO','DWD__IMG')"
+              />
+            </div>
+          </section>
+          <section class="books-page__info u-padding-small-top">
+            <div class="books-page__info--container" id="GOT__INFO">
+              <h4 class="heading-sub-lev theme--orange h3">
+                A Game Of Thrones
+              </h4>
+              <p class="books-page__info-block p">
+                Donec dapibus arcu nisl, at porttitor ante tristique sed. Nunc
+                sem velit, consectetur ut pretium nec, maximus vitae neque.
+                Phasellus nibh metus, euismod finibus ultrices eget, commodo eu
+                eros. Morbi tempus, enim sed sagittis scelerisque, tellus nunc
+                luctus urna, non luctus ligula magna quis sapien. Aenean sed
+                diam a magna placerat efficitur nec vitae ipsum. Nunc lobortis
+                nisl dolor, vel tristique quam hendrerit eget. Quisque elementum
+                condimentum laoreet. Sed sodales ipsum eget cursus imperdiet. Ut
+                nec sem in ante tincidunt pellentesque.
+              </p>
+            </div>
+            <div class="books-page__info--container" id="CK__INFO">
+              <h4 class="heading-sub-lev theme--orange h3">
+                A Clash Of Kings
+              </h4>
+              <p class="books-page__info-block p">
+                Nulla at dui scelerisque, pretium nulla eget, ultricies mi. Cras
+                mattis, ante et consectetur ultrices, odio est scelerisque
+                metus, non consequat ipsum ligula sed mauris. Mauris eu
+                dignissim libero, at commodo elit. Praesent ultricies faucibus
+                mauris et viverra. Aenean sollicitudin pellentesque aliquet.
+                Curabitur eu volutpat magna. Etiam pretium quam sapien, at
+                blandit lorem pretium ac. Nulla nec feugiat mi. Nunc rutrum a
+                ante sed porttitor. Nullam interdum, tellus eu ornare elementum,
+                libero purus facilisis nibh, nec vestibulum diam nisi sit amet
+                augue. Etiam porttitor orci eu leo mattis, sed bibendum risus
+                porttitor.
+              </p>
+            </div>
+            <div class="books-page__info--container" id="ASOS1__INFO">
+              <h4 class="heading-sub-lev theme--orange h3">
+                A Storm Of Swords: Steel and Snow
+              </h4>
+              <p class="books-page__info-block p">
+                Etiam venenatis porta ex et pretium. Morbi semper semper
+                blandit. Ut commodo consequat odio, quis pharetra orci ultrices
+                nec. Nam sollicitudin, mi sed fringilla maximus, lorem quam
+                venenatis sem, et rhoncus arcu elit in nunc. Duis porttitor
+                vulputate leo eget volutpat. Cras laoreet congue tellus non
+                aliquam. Praesent interdum diam sagittis turpis suscipit dictum.
+                Maecenas tincidunt libero eget lorem ullamcorper placerat.
+                Vestibulum in accumsan justo, convallis volutpat nisl. Maecenas
+                ut purus sem. Vivamus eu tempor orci. Quisque elementum pharetra
+                leo, id scelerisque libero vulputate eget. Fusce accumsan
+                finibus ante sed venenatis. Nullam eu nisl eros. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Vestibulum sodales
+                tincidunt eros.
+              </p>
+            </div>
+            <div class="books-page__info--container" id="ASOS2__INFO">
+              <h4 class="heading-sub-lev theme--orange h3">
+                A Storm Of Swords: Blood and Gold
+              </h4>
+              <p class="books-page__info-block p">
+                Etiam venenatis porta ex et pretium. Morbi semper semper
+                blandit. Ut commodo consequat odio, quis pharetra orci ultrices
+                nec. Nam sollicitudin, mi sed fringilla maximus, lorem quam
+                venenatis sem, et rhoncus arcu elit in nunc. Duis porttitor
+                vulputate leo eget volutpat. Cras laoreet congue tellus non
+                aliquam. Praesent interdum diam sagittis turpis suscipit dictum.
+                Maecenas tincidunt libero eget lorem ullamcorper placerat.
+                Vestibulum in accumsan justo, convallis volutpat nisl. Maecenas
+                ut purus sem. Vivamus eu tempor orci. Quisque elementum pharetra
+                leo, id scelerisque libero vulputate eget. Fusce accumsan
+                finibus ante sed venenatis. Nullam eu nisl eros. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Vestibulum sodales
+                tincidunt eros.
+              </p>
+            </div>
+            <div class="books-page__info--container" id="FC__INFO">
+              <h4 class="heading-sub-lev theme--orange h3">
+                A Feast For Crows
+              </h4>
+              <p class="books-page__info-block p">
+                Integer sapien ex, tempor nec nunc nec, gravida cursus ligula.
+                Vestibulum accumsan velit dui, in commodo turpis tempus sit
+                amet. Pellentesque non bibendum tellus. Cras aliquam convallis
+                nibh, quis volutpat ligula ullamcorper ac. Aenean facilisis sem
+                non libero vulputate, a condimentum nibh semper. Vestibulum vel
+                commodo sapien, in sagittis arcu. Proin augue massa, consectetur
+                sit amet consequat in, molestie mollis dolor. Vestibulum at nisl
+                mi. Mauris vitae interdum lacus, eget molestie mauris. Fusce ac
+                quam orci. Vestibulum pharetra fringilla justo et malesuada.
+                Morbi nec nunc sem. Etiam sollicitudin viverra urna sit amet
+                lobortis.
+              </p>
+            </div>
+            <div class="books-page__info--container" id="DWD__INFO">
+              <h4 class="heading-sub-lev theme--orange h3">
+                A Dance Of Dragons
+              </h4>
+              <p class="books-page__info-block p">
+                Nulla sagittis feugiat semper. Donec faucibus metus a sodales
+                commodo. Maecenas nisl elit, hendrerit et nisi at, dignissim
+                maximus mauris. Proin gravida nisl in massa tincidunt tempus.
+                Donec quis tristique nibh, a cursus nisi. Etiam massa lacus,
+                vestibulum sit amet dolor et, porta fringilla enim. Aliquam
+                libero enim, finibus nec nulla ac, blandit aliquam enim. Nunc
+                dolor justo, hendrerit mattis ligula eu, volutpat malesuada
+                odio. Nulla facilisi. Phasellus vel lectus risus. Ut faucibus
+                laoreet felis at ultricies.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="awards-page u-padding-large-top u-padding-medium-bottom">
+        <h2 class="heading-section-lev h2">
+          | His Most Pretigious Awards |
+        </h2>
+        <ol class="awards-page__list">
+          <div class="awards-page__list-label" id="FACT__ONE">
+            <li class="awards-page__list-content li">
+              Hugo Award for Best Novella
+            </li>
+          </div>
+          <div class="awards-page__list-label" id="FACT__TWO">
+            <li class="awards-page__list-content li">
+              Locus Award for Best Fantasy Novel
+            </li>
+          </div>
+          <div class="awards-page__list-label" id="FACT__THREE">
+            <li class="awards-page__list-content li">
+              World Fantasy Award—Long Fiction
+            </li>
+          </div>
+          <div class="awards-page__list-label" id="FACT__FOUR">
+            <li class="awards-page__list-content li">
+              Primetime Emmy Award for Outstanding Drama Series
+            </li>
+          </div>
+          <div class="awards-page__list-label" id="FACT__FIVE">
+            <li class="awards-page__list-content li">
+              Locus Award for Best Short Story
+            </li>
+          </div>
+        </ol>
+      </section>
+      <section
+        class="information-page u-padding-medium-top u-padding-small-bottom"
+      >
+        <h2 class="heading-section-lev h2">| Additional Information |</h2>
+        <div class="information-page--container">
+          <article class="information-page__article">
+            <p class="information-page__article-block p">
+              Nunc vel sodales lacus, id sodales turpis. In hac habitasse platea
+              dictumst. Suspendisse dictum nisi eu accumsan faucibus. Aenean
+              laoreet sodales bibendum. Curabitur nunc arcu, efficitur sit amet
+              felis egestas, scelerisque sodales metus. Vestibulum tristique non
+              felis vitae viverra. In ut porta magna. Sed at interdum eros.
+            </p>
+            <p class="information-page__article-block p">
+              Vestibulum consequat sem at erat porta, ac pellentesque odio
+              gravida. Suspendisse maximus dolor ut arcu feugiat, ac bibendum
+              nisl imperdiet. Nulla facilisi. Phasellus vel lectus risus. Ut
+              faucibus laoreet felis at ultricies.
+            </p>
+            <p class="information-page__article-block p">
+              Donec vulputate orci ac dolor mattis, egestas dignissim massa
+              tincidunt. Phasellus porttitor molestie velit, hendrerit pharetra
+              urna euismod in. Etiam venenatis porta ex et pretium. Morbi semper
+              semper blandit. Ut commodo consequat odio, quis pharetra orci
+              ultrices nec. Nam sollicitudin, mi sed fringilla maximus, lorem
+              quam venenatis sem, et rhoncus arcu elit in nunc.
+            </p>
+            <p class="information-page__article-block h4">
+              Check out his website and social media below:
+            </p>
+            <a
+              class="information-page__article-link a"
+              href="http://www.georgerrmartin.com "
+              target="_blank"
+              >www.georgerrmartin.com</a
+            >
+            <div class="information-page__social--container">
+              <a
+                class="social__icon"
+                href="https://www.facebook.com/georgerrmartinofficial/"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a class="social__icon" href="https://twitter.com/GRRMspeaking"
+                ><i class="fab fa-twitter-square"></i
+              ></a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer u-padding-medium-top">
+      <div class="footer--container">
+        <h6 class="footer__credit h6">
+          Created by Copyright &copy; Shaurya-Sarma
+        </h6>
+        <div class="footer__icon--container">
+          <a
+            class="footer__icon"
+            href="https://www.freecodecamp.org/shaux"
+            target="_blank"
+            ><i class="fab fa-free-code-camp"></i
+          ></a>
+          <a
+            class="footer__icon"
+            href="https://github.com/Shaurya-Sarma"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            class="footer__icon"
+            href="https://codepen.io/shaux"
+            target="_blank"
+            ><i class="fab fa-codepen"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

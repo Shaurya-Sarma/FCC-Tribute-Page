@@ -1,0 +1,34 @@
+// Colors
+
+$colors: (
+  col-black: #000,
+  col-white: #fff,
+  col-dark-gray: #333,
+  col-medium-gray: #434343,
+  col-light-gray: #dcdcdc,
+  col-light-brown: #d4cabd,
+  col-dark-brown: #4f4e4c,
+  col-dark-orange: #d66a00,
+  col-medium-orange: #e25822,
+  col-magenta: #8b008b,
+  col-purple: #4b0082,
+  col-beige: #ebe2d4,
+  col-dark-red: #660000
+);
+
+// Fonts
+
+$fonts: (
+  font-heading: #{"Lato",
+  serif},
+  font-body: #{"Source Sans Pro",
+  sans-serif},
+  font-alt: #{"Montserrat",
+  sans-serif}
+);
+
+$lh: (
+  mobile: 2.75,
+  tablet: 2,
+  desktop: 1.75
+);

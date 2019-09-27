@@ -1,0 +1,26 @@
+.footer {
+  &--container {
+    background-color: colors(col-medium-gray);
+    padding: 2.5rem; // 25px/10px = 2.5rem
+  }
+  &__credit {
+    color: colors(col-white);
+    text-align: center;
+    margin-bottom: 2rem; // 20px/10px = 2rem
+  }
+  &__icon--container {
+    text-align: center;
+  }
+  &__icon {
+    color: colors(col-white);
+    font-size: 4rem; // 40px/10px = 4rem
+    margin: 0 2rem; // 20px/10px = 2rem
+    padding: 0.8rem; // 8px/10px = 0.8rem
+    @include responsive(medium_width) {
+      font-size: 3rem; // 30px/10px = 3rem
+    }
+    &:hover {
+      box-shadow: 1px 2px 4px rgba(colors(col-white), 0.6);
+    }
+  }
+}

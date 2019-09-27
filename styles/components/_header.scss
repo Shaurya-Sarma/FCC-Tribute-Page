@@ -1,0 +1,19 @@
+// Header Section
+.header {
+  padding: 1.8rem; // 18px/10px = 1.8rem
+  @include responsive(medium_width) {
+    padding: 0;
+  }
+  &__container {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(https://i.imgur.com/Txm2nfS.jpg);
+    height: 100vh;
+    clip-path: polygon(0 0, 95% 0, 100% 10%, 100% 100%, 5% 100%, 0 90%);
+    @include responsive(medium_width) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+    }
+  }
+}

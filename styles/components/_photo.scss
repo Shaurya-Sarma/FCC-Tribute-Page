@@ -1,0 +1,44 @@
+// Photo Page
+.photo-page {
+  padding: 1.8rem; // 18px/10px = 1.8rem
+  @include responsive(medium_width) {
+    padding: 0;
+  }
+  &__container {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://miro.medium.com/max/10238/1*v0RCTUY4rmOHvBH2vCNBcQ.jpeg);
+    height: 90vh;
+    clip-path: polygon(
+      100% 0,
+      100% 90%,
+      55% 90%,
+      50% 100%,
+      45% 90%,
+      0 90%,
+      0 0
+    );
+    @include responsive(medium_width) {
+      background-position: center;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+    }
+  }
+  &__inner-quote-container {
+    border-left: 3px colors(col-white) solid;
+    background: rgba(colors(col-medium-gray), 0.4);
+    padding: 2rem; // 20px/10px = 2rem
+    float: left;
+    max-width: 30vw;
+    margin: 10rem 5rem; // 100px/10px = 10rem | 50px/10px = 5rem
+    @include responsive(small_width) {
+      margin-top: 45rem; // 450px/10px = 45rem
+      margin-left: 5rem; // 50px/10px = 5rem
+    }
+  }
+
+  &__quote {
+    color: colors(col-white);
+    line-height: 1.75;
+  }
+}

@@ -1,0 +1,26 @@
+/* 
+Methodology includes components from SMACSS, ACSS, OCCSS, BEM
+- dividing code aross multiple SASS  partials
+- helper classes to apply consistent styling
+- naming convention: retain class specificity
+- pre-defining repetitve functions, mixin-ins, variables
+- id selectors as override rule sets (sometimes)
+*/
+
+@import "common/mixins"; // pre-defined mixin declarations
+@import "common/functions"; // pre-defined function declartions
+@import "common/variables"; // pre-defined variable declarations
+
+@import "common/base"; // Overide browser defaults | IE: psuedo-classes
+@import "common/helpers"; // Global Classes
+
+@import "components/heading"; // components directory | files for each section
+@import "components/header";
+@import "components/biography";
+@import "components/photo";
+@import "components/books";
+@import "components/awards";
+@import "components/info";
+@import "components/footer";
+
+@import "pages/home"; // pages directory | files for each page { page-specific styling }
