@@ -20,7 +20,7 @@ The styles directory is further divided into three sub directiories:
 * [Pages](https://github.com/Shaurya-Sarma/FCC-Tribute-Page/tree/master/styles/pages)
 
 ### Common Directory
-This includes templating stylesheets such as html styling, helper classes, SASS variables, functions, and mixins. 
+This includes templating stylesheets such as HTML styling, helper classes, SASS variables, functions, and mixins. 
 * _base.scss
 * _functions.scss
 * _helpers.scss
@@ -29,7 +29,7 @@ This includes templating stylesheets such as html styling, helper classes, SASS 
 
 ### Components Directory 
 This includes indiviual stylsheets for each component of a page: navigation bars, footers, sidebars, galleries, and main content.
-By splitting code into seperate sections, it is easily to make quick changes and locate certain elements or css rules.
+By splitting code into seperate sections, it is easy to make quick changes and locate certain elements or CSS rules.
 
 ### Pages Directory
 For more wide-scale projects, with multiple pages, this allows for id selectors to make page-specific overrides. By using the BEM convention, id selectors will act as !important selector but still retain best practices. By using classes and id selectors (for overriding styles) elements won't struggle with specificity.
