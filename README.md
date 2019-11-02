@@ -1,7 +1,7 @@
 # FCC-Tribute-Page
-A tribute page of George R.R Martin
 
-This project is for the completion of the Responsive Web Design Project on FreeCodeCamp. You can find me on https://www.freecodecamp.org/shaux.
+
+A tribute page of George R.R Martin to the completion of the Responsive Web Design Project on FreeCodeCamp. You can find me on https://www.freecodecamp.org/shaux.
 
 Live Server: https://shaurya-sarma.github.io/FCC-Tribute-Page/
 
